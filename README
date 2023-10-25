@@ -1,0 +1,95 @@
+Ensimag 2A POO - TP 2022/23
+
+============================
+
+
+
+- src: contiennent les tests utilisés:
+
+  -> LecteurDonnees.java         : lit tous les éléments d'un fichier de description de données (cases, incendies et robots) et les affiche.
+
+                                   A vous de MODIFIER cette classe (ou en écrire une nouvelle) pour créer les objets correspondant à vos propres classes
+
+  -> TestLecteurDonnees.java     : lit un fichier de données et affiche son contenu
+
+  -> TestInvader                 : crée un simulateur "mini Invaders" dans une fenêtre graphique
+
+->TestScenarioZero : permet d'exécuter le scénario 0 (KO) donné dans le sujet (une fois après lecture). 
+
+->TestScenarioUn : permet d'exécuter le scénario 1 (OK) donné dans le sujet (une fois après lecture). 
+
+  -> TestSimulateur : permet l'exécution de la stratégie évoluée et la stratégie élémentaire sur les cartes données.
+
+
+
+Et un dossier classe contenant les classes utilise tout au long du projet.
+
+
+
+- src/doc: la documentation (API) des classes utilisées dans tout le TP. Point d'entrée: index.html
+
+
+
+- cartes: quelques exemples de fichiers de données en plus d'une carte test.map utilisée pour tester des cas extrêmes.
+
+
+
+
+
+- Makefile: quelques explications sur la compilation en ligne, notamment la notion de classpath et l'utilisation de gui.jar
+
+
+
+-images: L'ensemble des images utilise dans la simulation pour modéliser les robots, les natures  des terrain et les incendies. 
+
+
+
+
+Execution : 
+
+
+
+Pour tester: 
+
+1 - ouvrez le terminal.
+
+2 -  se placer dans le repertoire codeetudiants
+
+
+pour chaque test faire: 
+
+
+
+La compilation : 
+
+
+
+javac -d bin -classpath bin/gui.jar -sourcepath src src/(nomTest).java 
+
+
+
+L'execution : 
+
+
+
+java -classpath bin:bin/gui.jar (nomTest) cartes/(nomDeLaCarte).map
+
+
+
+Par exemple pour le testSimulateur et pour la carte : carteSujet 
+
+
+
+javac -d bin -classpath bin/gui.jar -sourcepath src src/TestSimulateur.java
+
+
+
+Apres:
+
+
+
+java -classpath bin:bin/gui.jar TestSimulateur cartes/carteSujet.map 
+
+
+
+Ou Bien directement make testSimulateur suivi de make exeSimulateur. Pour plus de details ouvrez le fichier Makefile,  éventuellement pour modifier la carte.)
